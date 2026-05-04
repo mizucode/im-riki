@@ -62,7 +62,7 @@ export default function RiwayatPekerjaan() {
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white"
         >
           Riwayat <span className="text-indigo-600 dark:text-indigo-400">Pekerjaan</span>
         </motion.h1>
@@ -79,7 +79,7 @@ export default function RiwayatPekerjaan() {
       {/* Timeline Section */}
       <motion.div variants={container} initial="hidden" animate="show" className="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-indigo-500 before:via-slate-300 dark:before:via-slate-800 before:to-transparent">
         {experiences.map((exp, index) => (
-          <motion.div key={index} variants={item} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+          <motion.div key={index} variants={item} className="relative flex items-center justify-end md:justify-normal md:odd:flex-row-reverse group is-active">
             {/* Icon Circle */}
             <div className="flex items-center justify-center w-10 h-10 rounded-sm bg-white dark:bg-slate-900 border-2 border-indigo-500 z-10 absolute left-0 md:left-1/2 md:-ml-5 transition-transform group-hover:scale-110 duration-300">
               <div className="text-indigo-600 dark:text-indigo-400">
@@ -134,7 +134,7 @@ export default function RiwayatPekerjaan() {
       >
         <h3 className="text-xl font-bold mb-2">Ingin berkolaborasi dalam proyek berikutnya?</h3>
         <p className="text-slate-500 dark:text-slate-400 mb-6">Saya selalu terbuka untuk tantangan baru dalam pengembangan sistem berskala besar.</p>
-        <button className="inline-flex items-center justify-center px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-sm transition-all active:scale-95 shadow-lg shadow-indigo-500/20">
+        <button className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-sm transition-all active:scale-95 shadow-lg shadow-indigo-500/20">
           Hubungi Saya Sekarang
           <ChevronRight className="ml-2 w-4 h-4" />
         </button>
