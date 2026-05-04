@@ -1,0 +1,95 @@
+{
+  "Sidebar": {
+    "dashboard": "Dasbor",
+    "workHistory": "Riwayat Pekerjaan",
+    "education": "Pendidikan",
+    "skills": "Keahlian",
+    "projects": "Proyek",
+    "achievements": "Pencapaian",
+    "blog": "Blog",
+    "contact": "Kontak",
+    "frontendApp": "Front-End App",
+    "backendApp": "Back-End App",
+    "fullstackApp": "Fullstack App",
+    "technicalSkills": "Keahlian Teknis",
+    "softSkills": "Keahlian Interpersonal",
+    "visualArchive": "Arsip Visual",
+    "activityGallery": "Galeri Kegiatan"
+  },
+  "Profile": {
+    "role": "Full-Stack Developer"
+  },
+  "Theme": {
+    "toggle": "Ganti Tema"
+  },
+  "HeaderTitle": {
+    "dashboard": "Dasbor Utama",
+    "allProjects": "Semua Proyek",
+    "projectsFrontEnd": "Proyek / Front-End App",
+    "projectsBackEnd": "Proyek / Back-End App",
+    "projectsFullstack": "Proyek / Fullstack App",
+    "workHistory": "Riwayat Pekerjaan",
+    "academicBackground": "Latar Belakang Akademik",
+    "achievements": "Pencapaian & Sertifikasi",
+    "technicalSkills": "Keahlian / Teknis",
+    "interpersonalSkills": "Keahlian / Interpersonal",
+    "visualArchive": "Arsip Visual / Galeri Kegiatan",
+    "blog": "Blog & Artikel",
+    "contact": "Hubungi Saya"
+  },
+  "Language": {
+    "toggle": "Ganti Bahasa"
+  },
+  "Metadata": {
+    "defaultTitle": "Dasbor | Riki Muhamad",
+    "description": "Portofolio profesional Riki Muhamad Fadilah - Membangun pengalaman web modern dengan React dan Next.js."
+  },
+  "Home": {
+    "availableForNewProjects": "Tersedia untuk Proyek Baru",
+    "helloIAm": "Halo, Saya",
+    "heroDescription": "Full-Stack Web Developer yang berdedikasi dengan rekam jejak kuat dalam membangun aplikasi web berskala besar yang efisien. Menggabungkan keahlian front-end dan back-end terdepan melalui implementasi ekosistem JavaScript (React, Next.js, Node.js) dan PHP (Native & Laravel) untuk menciptakan solusi yang mulus dari antarmuka pengguna hingga logika server. Berpengalaman penuh dalam siklus pengembangan perangkat lunak (SDLC), dari perancangan arsitektur database hingga peluncuran platform, sistem kampus, dan proyek skala nasional.",
+    "startCollaboration": "Mulai Kolaborasi",
+    "viewResume": "Lihat CV",
+    "stats": {
+      "completedProjects": "Proyek Selesai",
+      "uptime": "Uptime",
+      "yearsOfExperience": "Tahun Pengalaman",
+      "satisfiedClients": "Client Terpuaskan"
+    },
+    "skills": {
+      "frontend": {
+        "title": "Front-End Development",
+        "desc": "Membangun tampilan antarmuka modern yang cepat dan responsif."
+      },
+      "backend": {
+        "title": "Back-End Development",
+        "desc": "Membangun sistem logika bisnis dan manajemen basis data."
+      },
+      "performance": {
+        "title": "Performance",
+        "desc": "Optimasi kecepatan dan SEO untuk hasil maksimal."
+      }
+    },
+    "featuredProjects": {
+      "title": "Proyek Unggulan",
+      "subtitle": "Implementasi sistem berskala besar dan arsitektur modern.",
+      "viewAll": "Lihat Semua Proyek",
+      "viewLiveDemo": "Lihat Live Demo",
+      "project1": {
+        "title": "Dashboard Peningkatan Prestasi Olahraga",
+        "category": "Kemenpora RI",
+        "desc": "Sistem agregasi data dan visualisasi performa atlet untuk mendukung monitoring prestasi olahraga nasional di bawah naungan Deputi 3 Kemenpora RI",
+        "longDesc": "Dashboard ini merupakan platform pemantauan strategis yang digunakan untuk mengagregasi dan memvisualisasikan data prestasi olahraga nasional secara real-time. Sistem ini berfungsi sebagai instrumen pengambilan keputusan bagi Deputi 3 Kemenpora dalam memantau perkembangan atlet dan capaian prestasi di berbagai cabang olahraga."
+      },
+      "project2": {
+        "title": "Sistem Informasi Manajemen Aset Terpadu (SIMASET)",
+        "category": "UM Kuningan",
+        "desc": "Platform berbasis web komprehensif untuk mendigitalisasi siklus hidup inventaris dan pemantauan aset secara terpusat di lingkungan Universitas Muhammadiyah Kuningan, mulai dari pengadaan, pelacakan mutasi, hingga penyusutan nilai aset.",
+        "longDesc": "Sistem ini digunakan untuk mengelola inventaris dan aset milik institusi Universitas Muhammadiyah Kuningan. Dengan sistem ini, pengguna dapat mengelola aset yang dimiliki oleh institusi secara efisien dan efektif."
+      }
+    },
+    "techMarquee": {
+      "title": "Teknologi & Infrastruktur Utama"
+    }
+  }
+}

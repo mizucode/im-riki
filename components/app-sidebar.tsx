@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -20,112 +21,100 @@ import {
   SidebarMenuSubItem,
   SidebarRail,
 } from '@/components/ui/sidebar'
-import { 
-  ChevronRight, 
-  LayoutDashboard, 
-  FolderKanban, 
-  History, 
-  GraduationCap, 
-  Trophy, 
-  Cpu, 
-  Image as ImageIcon, 
-  Newspaper, 
-  Mail 
-} from 'lucide-react'
+import { ChevronRight, Cpu, FolderKanban, GraduationCap, History, Image as ImageIcon, LayoutDashboard, Mail, Newspaper, Trophy } from 'lucide-react'
 
-// This is sample data.
-const data = {
-  navMain: [
+export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const pathname = usePathname()
+  const t = useTranslations('Sidebar')
+  const tProfile = useTranslations('Profile')
+
+  const navMain = [
     {
-      title: 'Dasbor',
+      title: t('dashboard'),
       url: '/',
       icon: LayoutDashboard,
       color: 'bg-blue-500',
     },
     {
-      title: 'Proyek',
+      title: t('projects'),
       url: '/proyek',
       icon: FolderKanban,
       color: 'bg-orange-500',
       items: [
         {
-          title: 'Aplikasi Web',
-          url: '/proyek/aplikasi-web',
+          title: t('frontendApp'),
+          url: '/proyek/front-end-app',
         },
         {
-          title: 'Aplikasi Seluler',
-          url: '/proyek/aplikasi-seluler',
+          title: t('backendApp'),
+          url: '/proyek/back-end-app',
         },
         {
-          title: 'Desain UI/UX',
-          url: '/proyek/desain-ui-ux',
+          title: t('fullstackApp'),
+          url: '/proyek/fullstack-app',
         },
       ],
     },
     {
-      title: 'Riwayat Pekerjaan',
+      title: t('workHistory'),
       url: '/riwayat-pekerjaan',
       icon: History,
       color: 'bg-purple-500',
     },
     {
-      title: 'Pendidikan',
+      title: t('education'),
       url: '/pendidikan',
       icon: GraduationCap,
       color: 'bg-indigo-500',
     },
     {
-      title: 'Pencapaian',
+      title: t('achievements'),
       url: '/pencapaian',
       icon: Trophy,
       color: 'bg-yellow-500',
     },
     {
-      title: 'Keahlian',
+      title: t('skills'),
       url: '/keahlian',
       icon: Cpu,
       color: 'bg-emerald-500',
       items: [
         {
-          title: 'Keahlian Teknis',
+          title: t('technicalSkills'),
           url: '/keahlian/teknis',
         },
         {
-          title: 'Keahlian Interpersonal',
+          title: t('softSkills'),
           url: '/keahlian/interpersonal',
         },
       ],
     },
     {
-      title: 'Arsip Visual',
+      title: t('visualArchive'),
       url: '/arsip-visual',
       icon: ImageIcon,
       color: 'bg-pink-500',
       items: [
         {
-          title: 'Galeri Kegiatan',
+          title: t('activityGallery'),
           url: '/arsip-visual/galeri-kegiatan',
         },
       ],
     },
     {
-      title: 'Blog',
+      title: t('blog'),
       url: '/blog',
       icon: Newspaper,
       color: 'bg-cyan-500',
     },
     {
-      title: 'Kontak',
+      title: t('contact'),
       url: '/kontak',
       icon: Mail,
       color: 'bg-indigo-600',
       variant: 'highlight',
     },
-  ],
-}
-
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-  const pathname = usePathname()
+  ]
 
   return (
     <Sidebar {...props}>
@@ -135,11 +124,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenuButton size="lg" asChild>
               <Link href="/">
                 <div className="flex aspect-square size-10 items-center justify-center rounded-sm overflow-hidden border-2 border-indigo-500 shadow-sm shrink-0">
-                  <Image src="https://github.com/shadcn.png" alt="Profile" width={40} height={40} className="w-full h-full object-cover rounded-sm" />
+                  <Image src="/images/profile.jpeg" alt="Profile" width={40} height={40} className="w-full h-full object-cover rounded-sm" />
                 </div>
                 <div className="flex flex-col gap-1.5 leading-none ml-1">
                   <span className="font-bold text-[15px] tracking-tight">Riki Muhamad Fadilah</span>
-                  <span className="text-[11px] font-semibold text-indigo-500 dark:text-indigo-400 uppercase tracking-wider">Pengembang Full-Stack</span>
+                  <span className="text-[11px] font-semibold text-indigo-500 dark:text-indigo-400 uppercase tracking-wider">{tProfile('role')}</span>
                 </div>
               </Link>
             </SidebarMenuButton>
@@ -150,14 +139,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <SidebarGroup>
           <SidebarMenu className="gap-2">
-            {data.navMain.map((item, index) =>
+            {navMain.map((item, index) =>
               item.items?.length ? (
                 <Collapsible key={item.title} defaultOpen={true} className="group/collapsible">
                   <SidebarMenuItem>
                     <CollapsibleTrigger asChild>
-                      <SidebarMenuButton 
+                      <SidebarMenuButton
                         isActive={pathname === item.url || item.items.some((sub) => pathname === sub.url)}
-                        className={pathname === item.url || item.items.some((sub) => pathname === sub.url) ? "font-bold" : "font-medium"}
+                        className={pathname === item.url || item.items.some((sub) => pathname === sub.url) ? 'font-bold' : 'font-medium'}
                       >
                         {item.icon && (
                           <div className={`flex aspect-square size-7 items-center justify-center rounded-sm text-white ${item.color}`}>
@@ -169,7 +158,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                       </SidebarMenuButton>
                     </CollapsibleTrigger>
                     <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
-                      <SidebarMenuSub>
+                      <SidebarMenuSub className="mt-1.5">
                         {item.items.map((subItem) => (
                           <SidebarMenuSubItem key={subItem.title}>
                             <SidebarMenuSubButton asChild isActive={pathname === subItem.url}>
@@ -183,12 +172,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 </Collapsible>
               ) : (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton 
-                    asChild 
+                  <SidebarMenuButton
+                    asChild
                     isActive={pathname === item.url}
-                    className={item.variant === 'highlight' ? "text-indigo-600 dark:text-indigo-400" : ""}
+                    className={item.variant === 'highlight' ? 'text-indigo-600 dark:text-indigo-400' : ''}
                   >
-                    <Link href={item.url} className={`flex items-center gap-2 ${pathname === item.url ? "font-bold" : "font-medium"}`}>
+                    <Link href={item.url} className={`flex items-center gap-2 ${pathname === item.url ? 'font-bold' : 'font-medium'}`}>
                       {item.icon && (
                         <div className={`flex aspect-square size-7 items-center justify-center rounded-sm text-white ${item.color}`}>
                           <item.icon className="size-4" />

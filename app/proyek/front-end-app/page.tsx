@@ -3,9 +3,9 @@ export default function AplikasiWeb() {
     <div className="max-w-6xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
       <div className="flex flex-col gap-2">
         <h1 className="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent w-fit">
-          Aplikasi Web
+          Front-End App
         </h1>
-        <p className="text-muted-foreground text-lg">Kumpulan proyek aplikasi web yang telah saya kembangkan.</p>
+        <p className="text-muted-foreground text-lg">Kumpulan proyek Front-End yang telah saya kembangkan.</p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

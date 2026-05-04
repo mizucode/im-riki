@@ -2,28 +2,31 @@
 
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
-const titleMap: Record<string, string> = {
-  '/': 'Dasbor Utama',
-  '/proyek': 'Semua Proyek',
-  '/proyek/aplikasi-web': 'Proyek / Aplikasi Web',
-  '/proyek/aplikasi-seluler': 'Proyek / Aplikasi Seluler',
-  '/proyek/desain-ui-ux': 'Proyek / Desain UI/UX',
-  '/riwayat-pekerjaan': 'Riwayat Pekerjaan',
-  '/pendidikan': 'Latar Belakang Akademik',
-  '/pencapaian': 'Pencapaian & Sertifikasi',
-  '/keahlian/teknis': 'Keahlian / Teknis',
-  '/keahlian/interpersonal': 'Keahlian / Interpersonal',
-  '/arsip-visual/galeri-kegiatan': 'Arsip Visual / Galeri Kegiatan',
-  '/blog': 'Blog & Artikel',
-  '/kontak': 'Hubungi Saya',
+const keyMap: Record<string, string> = {
+  '/': 'dashboard',
+  '/proyek': 'allProjects',
+  '/proyek/front-end-app': 'projectsFrontEnd',
+  '/proyek/back-end-app': 'projectsBackEnd',
+  '/proyek/fullstack-app': 'projectsFullstack',
+  '/riwayat-pekerjaan': 'workHistory',
+  '/pendidikan': 'academicBackground',
+  '/pencapaian': 'achievements',
+  '/keahlian/teknis': 'technicalSkills',
+  '/keahlian/interpersonal': 'interpersonalSkills',
+  '/arsip-visual/galeri-kegiatan': 'visualArchive',
+  '/blog': 'blog',
+  '/kontak': 'contact',
 }
 
 export function HeaderTitle() {
   const pathname = usePathname()
+  const t = useTranslations('HeaderTitle')
   
   // Find matching title or format from path
-  const title = titleMap[pathname] || pathname.split('/').filter(Boolean).map(s => 
+  const key = keyMap[pathname]
+  const title = key ? t(key as Parameters<typeof t>[0]) : pathname.split('/').filter(Boolean).map(s => 
     s.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
   ).join(' / ')
 

@@ -1,0 +1,95 @@
+{
+  "Sidebar": {
+    "dashboard": "Dashboard",
+    "workHistory": "Work History",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects",
+    "achievements": "Achievements",
+    "blog": "Blog",
+    "contact": "Contact",
+    "frontendApp": "Front-End App",
+    "backendApp": "Back-End App",
+    "fullstackApp": "Fullstack App",
+    "technicalSkills": "Technical Skills",
+    "softSkills": "Soft Skills",
+    "visualArchive": "Visual Archive",
+    "activityGallery": "Activity Gallery"
+  },
+  "Profile": {
+    "role": "Full-Stack Developer"
+  },
+  "Theme": {
+    "toggle": "Toggle Theme"
+  },
+  "HeaderTitle": {
+    "dashboard": "Main Dashboard",
+    "allProjects": "All Projects",
+    "projectsFrontEnd": "Projects / Front-End App",
+    "projectsBackEnd": "Projects / Back-End App",
+    "projectsFullstack": "Projects / Fullstack App",
+    "workHistory": "Work History",
+    "academicBackground": "Academic Background",
+    "achievements": "Achievements & Certifications",
+    "technicalSkills": "Skills / Technical",
+    "interpersonalSkills": "Skills / Interpersonal",
+    "visualArchive": "Visual Archive / Activity Gallery",
+    "blog": "Blog & Articles",
+    "contact": "Contact Me"
+  },
+  "Language": {
+    "toggle": "Switch Language"
+  },
+  "Metadata": {
+    "defaultTitle": "Dashboard | Riki Muhamad",
+    "description": "Professional portfolio of Riki Muhamad Fadilah - Building modern web experiences with React and Next.js."
+  },
+  "Home": {
+    "availableForNewProjects": "Available for New Projects",
+    "helloIAm": "Hello, I am",
+    "heroDescription": "A dedicated Full-Stack Web Developer with a strong track record in building efficient, large-scale web applications. Combining cutting-edge front-end and back-end expertise through the implementation of the JavaScript ecosystem (React, Next.js, Node.js) and PHP (Native & Laravel) to create seamless solutions from the user interface to the server logic. Fully experienced in the software development life cycle (SDLC), from database architecture design to launching platforms, campus systems, and national-scale projects.",
+    "startCollaboration": "Start Collaboration",
+    "viewResume": "View Resume",
+    "stats": {
+      "completedProjects": "Completed Projects",
+      "uptime": "Uptime",
+      "yearsOfExperience": "Years of Experience",
+      "satisfiedClients": "Satisfied Clients"
+    },
+    "skills": {
+      "frontend": {
+        "title": "Front-End Development",
+        "desc": "Building fast, responsive, and modern user interfaces."
+      },
+      "backend": {
+        "title": "Back-End Development",
+        "desc": "Building business logic systems and database management."
+      },
+      "performance": {
+        "title": "Performance",
+        "desc": "Optimizing speed and SEO for maximum results."
+      }
+    },
+    "featuredProjects": {
+      "title": "Featured Projects",
+      "subtitle": "Implementation of large-scale systems and modern architectures.",
+      "viewAll": "View All Projects",
+      "viewLiveDemo": "View Live Demo",
+      "project1": {
+        "title": "Sports Achievement Improvement Dashboard",
+        "category": "Kemenpora RI",
+        "desc": "Data aggregation and athlete performance visualization system to support the monitoring of national sports achievements under the auspices of Deputy 3 of the Indonesian Ministry of Youth and Sports",
+        "longDesc": "This dashboard is a strategic monitoring platform used to aggregate and visualize national sports achievement data in real-time. This system serves as a decision-making instrument for Deputy 3 of Kemenpora in monitoring athlete development and achievements in various sports."
+      },
+      "project2": {
+        "title": "Integrated Asset Management Information System (SIMASET)",
+        "category": "UM Kuningan",
+        "desc": "A comprehensive web-based platform to digitalize the inventory lifecycle and centrally monitor assets within the Kuningan Muhammadiyah University environment, from procurement and mutation tracking to asset depreciation.",
+        "longDesc": "This system is used to manage inventory and assets belonging to the Kuningan Muhammadiyah University institution. With this system, users can manage assets owned by the institution efficiently and effectively."
+      }
+    },
+    "techMarquee": {
+      "title": "Core Technologies & Infrastructure"
+    }
+  }
+}
