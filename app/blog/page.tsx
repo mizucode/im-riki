@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight, Calendar, Newspaper, Search, Tag } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -33,6 +34,7 @@ const item = {
 }
 
 export default function BlogListing() {
+  const t = useTranslations('Blog')
   const [searchQuery, setSearchQuery] = useState('')
 
   const filteredPosts = posts.filter(
@@ -53,14 +55,14 @@ export default function BlogListing() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider border border-indigo-100 dark:border-indigo-500/20"
           >
             <Newspaper className="w-3.5 h-3.5" />
-            Wawasan & Artikel
+            {t('badge')}
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white"
           >
-            Blog & <span className="text-indigo-600 dark:text-indigo-400">Pemikiran</span>
+            {t('title')} <span className="text-indigo-600 dark:text-indigo-400">{t('highlight')}</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: -10 }}
@@ -68,7 +70,7 @@ export default function BlogListing() {
             transition={{ delay: 0.1 }}
             className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl"
           >
-            Berbagi pengetahuan seputar pengembangan perangkat lunak, teknologi terbaru, dan tips produktivitas pengembang.
+            {t('subtitle')}
           </motion.p>
         </div>
 
@@ -77,7 +79,7 @@ export default function BlogListing() {
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
           <input
             type="text"
-            placeholder="Cari artikel..."
+            placeholder={t('search')}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full pl-10 pr-4 py-2.5 rounded-sm border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#09090B] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-sm"
@@ -97,7 +99,7 @@ export default function BlogListing() {
               className="group relative flex flex-col rounded-sm border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#09090B] overflow-hidden transition-all hover:border-indigo-500/50"
             >
               {/* Visual Accent */}
-              <div className="h-1.5 w-full bg-gradient-to-r from-indigo-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="h-1.5 w-full bg-linear-to-r from-indigo-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
               <div className="p-8 flex flex-col h-full">
                 <div className="flex items-center justify-between mb-4">
@@ -124,7 +126,7 @@ export default function BlogListing() {
                     href={`/blog/${post.slug}`}
                     className="inline-flex items-center text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 transition-colors group/link"
                   >
-                    Baca Selengkapnya
+                    {t('read_more')}
                     <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover/link:translate-x-1" />
                   </Link>
 
@@ -146,8 +148,8 @@ export default function BlogListing() {
           className="py-20 text-center border border-dashed border-slate-300 dark:border-slate-700 rounded-sm"
         >
           <Search className="w-10 h-10 mx-auto text-slate-400 mb-4" />
-          <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Artikel Tidak Ditemukan</h3>
-          <p className="text-slate-500">Coba gunakan kata kunci lain untuk pencarianmu.</p>
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{t('no_results')}</h3>
+          <p className="text-slate-500">{t('no_results_desc')}</p>
         </motion.div>
       )}
     </div>

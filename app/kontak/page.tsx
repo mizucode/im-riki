@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, Globe } from 'lucide-react'
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa6'
+import { Send } from 'lucide-react'
+import { FaGithub, FaLinkedin, FaInstagram, FaTiktok } from 'react-icons/fa6'
 import { useState } from 'react'
 import { toast } from 'sonner'
 
@@ -14,40 +14,62 @@ export default function Kontak() {
     message: ''
   })
 
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    toast.success('Pesan Berhasil Terkirim!', {
-      description: 'Terima kasih telah menghubungi saya. Saya akan segera membalas pesan Anda.'
-    })
+    setIsSubmitting(true)
+    
+    try {
+      const subject = encodeURIComponent(formData.subject)
+      const body = encodeURIComponent(`Nama: ${formData.name}\nEmail: ${formData.email}\n\nPesan:\n${formData.message}`)
+      
+      // Menggunakan Gmail Web Composer Link (lebih stabil daripada mailto)
+      const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=riki@umkuningan.ac.id&su=${subject}&body=${body}`
+      
+      window.open(gmailLink, '_blank')
+
+      setIsSubmitting(false)
+      toast.success('Membuka Gmail...', {
+        description: 'Silakan klik kirim pada tab Gmail yang baru terbuka.'
+      })
+
+    } catch {
+      setIsSubmitting(false)
+      toast.error('Gagal Membuka Gmail', {
+        description: 'Pastikan Anda dapat mengakses Gmail di browser ini.'
+      })
+    }
   }
 
   const contactInfo = [
     {
-      icon: <Mail className="w-5 h-5" />,
-      label: 'Email',
-      value: 'riki.muhamad@example.com',
-      href: 'mailto:riki.muhamad@example.com'
+      icon: <FaInstagram className="w-5 h-5" />,
+      label: 'Instagram',
+      value: '@altermizu',
+      href: 'https://instagram.com/altermizu'
     },
     {
-      icon: <Phone className="w-5 h-5" />,
-      label: 'Telepon / WhatsApp',
-      value: '+62 812-3456-7890',
-      href: 'https://wa.me/6281234567890'
+      icon: <FaLinkedin className="w-5 h-5" />,
+      label: 'LinkedIn',
+      value: 'Riki Muhamad Fadilah',
+      href: 'https://www.linkedin.com/in/riki-muhamad-fadilah'
     },
     {
-      icon: <MapPin className="w-5 h-5" />,
-      label: 'Lokasi',
-      value: 'Bandung, Jawa Barat, Indonesia',
-      href: '#'
+      icon: <FaTiktok className="w-5 h-5" />,
+      label: 'TikTok',
+      value: '@mizuverse',
+      href: 'https://www.tiktok.com/@mizuversee'
+    },
+    {
+      icon: <FaGithub className="w-5 h-5" />,
+      label: 'GitHub',
+      value: 'Mizucode',
+      href: 'https://github.com/mizucode'
     }
   ]
 
-  const socialLinks = [
-    { icon: <FaGithub className="w-5 h-5" />, href: 'https://github.com', label: 'GitHub' },
-    { icon: <FaLinkedin className="w-5 h-5" />, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: <FaInstagram className="w-5 h-5" />, href: 'https://instagram.com', label: 'Instagram' },
-    { icon: <Globe className="w-5 h-5" />, href: '#', label: 'Website' }
-  ]
+
 
   return (
     <div className="max-w-6xl mx-auto space-y-12 pb-20">
@@ -70,10 +92,10 @@ export default function Kontak() {
         </motion.p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
         {/* Contact Information & Socials */}
-        <div className="lg:col-span-1 space-y-8">
-          <div className="space-y-6">
+        <div className="lg:col-span-1">
+          <div className="flex flex-col gap-6 h-full">
             {contactInfo.map((info, index) => (
               <motion.a
                 key={index}
@@ -81,35 +103,17 @@ export default function Kontak() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="flex items-start gap-4 p-6 rounded-sm border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#09090B] transition-all hover:border-indigo-500/50 group"
+                className="flex-1 flex items-start gap-4 p-6 rounded-sm border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#09090B] transition-all hover:border-indigo-500/50 group"
               >
-                <div className="w-12 h-12 rounded-sm bg-indigo-500/10 flex items-center justify-center text-indigo-600 dark:text-indigo-400 shrink-0 group-hover:bg-indigo-500 group-hover:text-white transition-all">
+                <div className="w-12 h-12 rounded-sm bg-linear-to-br from-blue-400 to-indigo-500 flex items-center justify-center text-white shrink-0 shadow-sm transition-all group-hover:scale-110">
                   {info.icon}
                 </div>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-1">{info.label}</p>
-                  <p className="text-sm font-bold text-slate-900 dark:text-white">{info.value}</p>
+                  <p className="text-sm font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-1">{info.label}</p>
+                  <p className="text-lg font-extrabold text-slate-900 dark:text-white leading-tight">{info.value}</p>
                 </div>
               </motion.a>
             ))}
-          </div>
-
-          <div className="p-8 rounded-sm border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#09090B] space-y-6">
-            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-600">Temukan Saya di Media Sosial</h3>
-            <div className="flex flex-wrap gap-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-sm border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-indigo-500 hover:border-indigo-500 hover:text-white transition-all shadow-sm"
-                  aria-label={social.label}
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
           </div>
         </div>
 
@@ -119,7 +123,7 @@ export default function Kontak() {
             onSubmit={handleSubmit}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="p-8 md:p-10 rounded-sm border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#09090B] space-y-6 relative overflow-hidden"
+            className="h-full p-8 md:p-10 rounded-sm border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#09090B] space-y-6 relative overflow-hidden flex flex-col"
           >
             {/* Form Background Accent */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
@@ -161,13 +165,12 @@ export default function Kontak() {
               />
             </div>
 
-            <div className="space-y-2 relative z-10">
+            <div className="space-y-2 relative z-10 flex-1 flex flex-col">
               <label className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Pesan</label>
               <textarea
                 required
-                rows={6}
                 placeholder="Tuliskan pesan Anda di sini..."
-                className="w-full px-4 py-3 rounded-sm border border-slate-200 dark:border-slate-800 bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-sm resize-none"
+                className="flex-1 w-full px-4 py-3 rounded-sm border border-slate-200 dark:border-slate-800 bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-sm resize-none min-h-[150px]"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               ></textarea>
@@ -175,10 +178,11 @@ export default function Kontak() {
 
             <button
               type="submit"
-              className="relative z-10 w-full sm:w-auto px-10 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-sm transition-all flex items-center justify-center gap-2 active:scale-95 shadow-lg shadow-indigo-500/20 group"
+              disabled={isSubmitting}
+              className="relative z-10 w-full sm:w-auto px-10 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-sm transition-all flex items-center justify-center gap-2 active:scale-95 shadow-lg shadow-indigo-500/20 group disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              Kirim Pesan
-              <Send className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+              {isSubmitting ? 'Membuka...' : 'Kirim Email'}
+              <Send className={`w-4 h-4 transition-transform ${isSubmitting ? 'animate-pulse' : 'group-hover:translate-x-1 group-hover:-translate-y-1'}`} />
             </button>
           </motion.form>
         </div>

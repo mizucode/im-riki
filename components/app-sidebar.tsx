@@ -139,7 +139,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <SidebarGroup>
           <SidebarMenu className="gap-2">
-            {navMain.map((item, index) =>
+            {navMain.map((item) =>
               item.items?.length ? (
                 <Collapsible key={item.title} defaultOpen={true} className="group/collapsible">
                   <SidebarMenuItem>

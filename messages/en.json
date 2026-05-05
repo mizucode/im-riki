@@ -163,5 +163,155 @@
         "description": "Integrated Asset Management Information System for digitalizing inventory lifecycles and centralized asset monitoring."
       }
     }
+  },
+  "WorkHistory": {
+    "title": "Work History",
+    "subtitle": "My professional journey in building digital solutions, from application development to server infrastructure management.",
+    "present": "Present",
+    "cta": {
+      "title": "Ready to Realize Future Digital Solutions?",
+      "description": "From complex backend architecture to intuitive frontend interfaces, I am ready to help you build efficient and scalable systems.",
+      "button": "Let's Discuss"
+    },
+    "experiences": {
+      "freelance": {
+        "title": "Freelance Web Developer",
+        "location": "Remote",
+        "description": "Collaborating in the development of national-scale platforms, including the Official Portal for POPNAS XVII 2025 and information systems within the Ministry of Education and Culture."
+      },
+      "staff_lpptsi": {
+        "title": "LPPTSI Staff (Full-Stack Developer)",
+        "location": "Kuningan, Indonesia",
+        "description": "Fully responsible for the development and maintenance of campus information systems, as part of the institution for construction, development, technology, and information systems."
+      },
+      "tofunime": {
+        "title": "Anime Streaming Website Developer",
+        "location": "Remote",
+        "description": "Building an anime streaming platform with a focus on interface optimization and efficient content management using PHP."
+      },
+      "junior_dev": {
+        "title": "Junior Web Developer",
+        "location": "Kuningan, Indonesia",
+        "description": "Involved in the creation of a CMS (Content Management System) for the kuningankab.go.id information website."
+      }
+    }
+  },
+  "Education": {
+    "title": "Academic",
+    "highlight": "Background",
+    "subtitle": "Formal education history that forms the foundation of my technical and professional knowledge.",
+    "achievementsTitle": "Achievements & Focus",
+    "quote": "An investment in knowledge pays the best interest.",
+    "author": "Benjamin Franklin",
+    "schools": {
+      "umk": {
+        "degree": "Bachelor of Education (S.Pd)",
+        "institution": "Universitas Muhammadiyah Kuningan",
+        "description": "Focused on software development, system architecture, and database management. Graduated with a very satisfactory predicate. Majoring in Information and Communication Technology Education.",
+        "achievements": ["GPA: 3.89 / 4.00", "Web Master Student Club Member", "Campus Teaching Program Participant (Batch 7)"]
+      },
+      "sma": {
+        "degree": "Science (Mathematics and Natural Sciences)",
+        "institution": "State Senior High School 1 Ciawigebang",
+        "description": "Diving into mathematics and science to strengthen logical foundations and analytical skills to support interests in technology.",
+        "achievements": ["IT Club Extracurricular Member"]
+      }
+    }
+  },
+  "Achievements": {
+    "title": "Achievements & Certifications",
+    "subtitle": "Validation of expertise and globally recognized awards.",
+    "items": {
+      "aws": {
+        "title": "AWS Certified Developer",
+        "issuer": "Amazon Web Services"
+      },
+      "hackathon": {
+        "title": "1st Place National Hackathon",
+        "issuer": "Ministry of Communication and Informatics"
+      },
+      "gcp": {
+        "title": "Google Cloud Engineer",
+        "issuer": "Google Cloud"
+      }
+    }
+  },
+  "HardSkills": {
+    "title": "Technical Skills",
+    "subtitle": "An overview of technical capabilities and tools used in development.",
+    "categories": {
+      "frontend": {
+        "title": "Frontend Development",
+        "skills": {
+          "html_css": "Building semantic web structures and designing aesthetic, responsive interfaces across various devices.",
+          "js_ts": "Implementing dynamic logic with strong type safety for more structured and error-minimizing code.",
+          "react_next": "Building high-performance modern web applications (SPA/SSR) with efficient component-based architecture.",
+          "tailwind": "Accelerating the styling process using utility-first methodology for precise and consistent designs."
+        }
+      },
+      "backend": {
+        "title": "Backend Development",
+        "skills": {
+          "php_laravel": "Building robust web applications using MVC architecture and modern Laravel features for high scalability.",
+          "nodejs": "Developing fast backend services and scalable APIs by leveraging the extensive JavaScript ecosystem.",
+          "mysql": "Designing and managing efficient database schemas and optimizing queries for maximum application performance.",
+          "restapi": "Designing and implementing standardized, secure, and efficient API endpoints for frontend integration."
+        }
+      },
+      "tools": {
+        "title": "Tools & Server",
+        "skills": {
+          "git": "Managing code development cycles with organized version control and efficient team collaboration.",
+          "docker": "Automating application deployment into containers to ensure consistency across various server environments.",
+          "linux": "Configuring and managing Linux servers for application hosting with optimal performance and security."
+        }
+      }
+    }
+  },
+  "SoftSkills": {
+    "title": "Interpersonal Skills",
+    "subtitle": "An overview of my interpersonal and managerial capabilities.",
+    "categories": {
+      "communication": {
+        "title": "Communication & Teamwork",
+        "skills": {
+          "teamwork": { "name": "Team Collaboration", "desc": "Experienced in cross-team collaboration to achieve project goals harmoniously." },
+          "clarity": { "name": "Clear Communication", "desc": "Conveying complex technical concepts in simple terms easily understood by stakeholders." },
+          "empathy": { "name": "Empathy", "desc": "Actively listening and being open to constructive feedback from colleagues." }
+        }
+      },
+      "management": {
+        "title": "Self Management",
+        "skills": {
+          "time": { "name": "Time Management", "desc": "Effectively prioritizing tasks to meet tight deadlines consistently." },
+          "problem_solving": { "name": "Problem Solving", "desc": "Analyzing root causes to find logical, efficient, and sustainable solutions." },
+          "adaptation": { "name": "Fast Adaptation", "desc": "Quickly adapting to new work environments and evolving industry technologies." }
+        }
+      },
+      "leadership": {
+        "title": "Leadership",
+        "skills": {
+          "proactive": { "name": "Proactive Initiative", "desc": "Proactively providing innovative ideas to improve system quality." },
+          "decision": { "name": "Decision Making", "desc": "Precise in making technical and managerial decisions during critical situations." },
+          "mentoring": { "name": "Mentoring", "desc": "Passionate about sharing technical knowledge and mentoring team members to grow together." }
+        }
+      }
+    }
+  },
+  "Gallery": {
+    "badge": "Visual Documentation",
+    "title": "Activity",
+    "highlight": "Gallery",
+    "subtitle": "A collection of moments and documentation from various technical events, communities, and other professional activities."
+  },
+  "Blog": {
+    "badge": "Insights & Articles",
+    "title": "Blog &",
+    "highlight": "Reflections",
+    "subtitle": "Sharing knowledge about software development, latest technologies, and developer productivity tips.",
+    "search": "Search articles...",
+    "no_results": "Articles Not Found",
+    "no_results_desc": "Try using different keywords for your search.",
+    "read_more": "Read More"
   }
 }

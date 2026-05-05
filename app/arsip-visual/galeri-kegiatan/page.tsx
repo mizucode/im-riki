@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Image as ImageIcon, Calendar, MapPin, Maximize2 } from 'lucide-react'
+import { Calendar, Image as ImageIcon, MapPin, Maximize2 } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 const galleryItems = [
@@ -10,43 +11,43 @@ const galleryItems = [
     location: 'Bandung, Indonesia',
     date: '12 Maret 2024',
     image: 'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?q=80&w=1000&auto=format&fit=crop',
-    category: 'Event'
+    category: 'Event',
   },
   {
     title: 'Workspace Setup 2024',
     location: 'Home Office',
     date: '05 Februari 2024',
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop',
-    category: 'Lifestyle'
+    category: 'Lifestyle',
   },
   {
     title: 'Tech Meetup Community',
     location: 'Jakarta, Indonesia',
     date: '20 Januari 2024',
     image: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1000&auto=format&fit=crop',
-    category: 'Event'
+    category: 'Event',
   },
   {
     title: 'Hackathon Project Presentation',
     location: 'Online',
     date: '15 Desember 2023',
     image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1000&auto=format&fit=crop',
-    category: 'Coding'
+    category: 'Coding',
   },
   {
     title: 'Collaboration Session',
     location: 'Co-working Space',
     date: '10 November 2023',
     image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop',
-    category: 'Team'
+    category: 'Team',
   },
   {
     title: 'New Hardware Unboxing',
     location: 'Home',
     date: '25 Oktober 2023',
     image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=1000&auto=format&fit=crop',
-    category: 'Gear'
-  }
+    category: 'Gear',
+  },
 ]
 
 const container = {
@@ -65,6 +66,8 @@ const itemVariant = {
 }
 
 export default function GaleriKegiatan() {
+  const t = useTranslations('Gallery')
+
   return (
     <div className="max-w-6xl mx-auto space-y-12 pb-20">
       {/* Header */}
@@ -76,14 +79,14 @@ export default function GaleriKegiatan() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider border border-indigo-100 dark:border-indigo-500/20"
           >
             <ImageIcon className="w-3.5 h-3.5" />
-            Dokumentasi Visual
+            {t('badge')}
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white"
           >
-            Galeri <span className="text-indigo-600 dark:text-indigo-400">Kegiatan</span>
+            {t('title')} <span className="text-indigo-600 dark:text-indigo-400">{t('highlight')}</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: -10 }}
@@ -91,40 +94,23 @@ export default function GaleriKegiatan() {
             transition={{ delay: 0.1 }}
             className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl"
           >
-            Koleksi momen dan dokumentasi dari berbagai kegiatan teknis, komunitas, dan aktivitas profesional lainnya.
+            {t('subtitle')}
           </motion.p>
-        </div>
-
-        {/* Categories Filter Placeholder */}
-        <div className="flex flex-wrap gap-2 mt-4 md:mt-0">
-          {['Semua', 'Event', 'Coding', 'Gear'].map((cat) => (
-            <button 
-              key={cat}
-              className={`px-4 py-2 rounded-sm text-xs font-bold transition-all border ${cat === 'Semua' ? 'bg-indigo-600 border-indigo-600 text-white' : 'border-slate-200 dark:border-slate-800 hover:border-indigo-500'}`}
-            >
-              {cat}
-            </button>
-          ))}
         </div>
       </div>
 
       {/* Gallery Grid */}
-      <motion.div 
-        variants={container} 
-        initial="hidden" 
-        animate="show" 
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-      >
+      <motion.div variants={container} initial="hidden" animate="show" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {galleryItems.map((item, index) => (
-          <motion.div 
-            key={index} 
+          <motion.div
+            key={index}
             variants={itemVariant}
             className="group relative flex flex-col rounded-sm border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#09090B] overflow-hidden transition-all hover:border-indigo-500/50"
           >
             {/* Image Container */}
-            <div className="aspect-[4/3] relative overflow-hidden bg-slate-100 dark:bg-slate-900">
-              <Image 
-                src={item.image} 
+            <div className="aspect-4/3 relative overflow-hidden bg-slate-100 dark:bg-slate-900">
+              <Image
+                src={item.image}
                 alt={item.title}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -142,9 +128,7 @@ export default function GaleriKegiatan() {
 
             {/* Details */}
             <div className="p-6">
-              <h3 className="text-lg font-extrabold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-500 transition-colors">
-                {item.title}
-              </h3>
+              <h3 className="text-lg font-extrabold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-500 transition-colors">{item.title}</h3>
               <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
                 <span className="flex items-center gap-1.5">
                   <Calendar className="w-3.5 h-3.5" />

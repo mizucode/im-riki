@@ -163,5 +163,155 @@
         "description": "Sistem Informasi Manajemen Aset Terpadu untuk digitalisasi siklus hidup inventaris dan pemantauan aset terpusat."
       }
     }
+  },
+  "WorkHistory": {
+    "title": "Riwayat Pekerjaan",
+    "subtitle": "Perjalanan profesional saya dalam membangun solusi digital, dari pengembangan aplikasi hingga manajemen infrastruktur server.",
+    "present": "Sekarang",
+    "cta": {
+      "title": "Siap Mewujudkan Solusi Digital Masa Depan?",
+      "description": "Dari arsitektur backend yang kompleks hingga antarmuka yang intuitif, saya siap membantu Anda membangun sistem yang efisien dan skalabel.",
+      "button": "Mari Berdiskusi"
+    },
+    "experiences": {
+      "freelance": {
+        "title": "Freelance Web Developer",
+        "location": "Remote",
+        "description": "Berkolaborasi dalam pengembangan platform skala nasional, termasuk Portal Resmi POPNAS XVII 2025 dan sistem informasi di Kemendikdasmen."
+      },
+      "staff_lpptsi": {
+        "title": "Staff LPPTSI (Full-Stack Developer)",
+        "location": "Kuningan, Indonesia",
+        "description": "Bertanggung jawab penuh dalam pengembangan dan pemeliharaan sistem informasi kampus, sebagai bagian dari lembaga pembangunan, pengembangan, teknologi dan sistem informasi."
+      },
+      "tofunime": {
+        "title": "Pengembang Website Nonton Anime",
+        "location": "Remote",
+        "description": "Membangun platform streaming anime dengan fokus pada optimasi antarmuka dan pengelolaan konten yang efisien menggunakan PHP."
+      },
+      "junior_dev": {
+        "title": "Junior Web Developer",
+        "location": "Kuningan, Indonesia",
+        "description": "Ikut terlibat dalam pembuatan CMS (Content Management System) sistem informasi website kuningankab.go.id."
+      }
+    }
+  },
+  "Education": {
+    "title": "Latar Belakang",
+    "highlight": "Akademik",
+    "subtitle": "Riwayat pendidikan formal yang membentuk landasan pengetahuan teknis dan profesional saya.",
+    "achievementsTitle": "Pencapaian & Fokus",
+    "quote": "Investasi dalam pengetahuan selalu memberikan bunga yang terbaik.",
+    "author": "Benjamin Franklin",
+    "schools": {
+      "umk": {
+        "degree": "Sarjana Pendidikan (S.Pd)",
+        "institution": "Universitas Muhammadiyah Kuningan",
+        "description": "Berfokus pada pengembangan perangkat lunak, arsitektur sistem, dan manajemen basis data. Lulus dengan predikat sangat memuaskan. Dengan prodi Pendidikan Teknologi Informasi dan Komunikasi.",
+        "achievements": ["IPK: 3.89 / 4.00", "Anggota UKM Web Master", "Peserta Kampus Mengajar 7"]
+      },
+      "sma": {
+        "degree": "MIPA (Matematika dan Ilmu Pengetahuan Alam)",
+        "institution": "SMA Negeri 1 Ciawigebang",
+        "description": "Mendalami ilmu matematika dan sains yang memperkuat fondasi logika serta kemampuan analitis untuk menunjang minat di bidang teknologi.",
+        "achievements": ["Anggota Eskul IT Club"]
+      }
+    }
+  },
+  "Achievements": {
+    "title": "Pencapaian & Sertifikasi",
+    "subtitle": "Validasi keahlian dan penghargaan yang diakui secara global.",
+    "items": {
+      "aws": {
+        "title": "AWS Certified Developer",
+        "issuer": "Amazon Web Services"
+      },
+      "hackathon": {
+        "title": "Juara 1 Hackathon Nasional",
+        "issuer": "Kementerian Kominfo"
+      },
+      "gcp": {
+        "title": "Google Cloud Engineer",
+        "issuer": "Google Cloud"
+      }
+    }
+  },
+  "HardSkills": {
+    "title": "Hard Skill",
+    "subtitle": "Gambaran kemampuan teknis dan alat yang digunakan dalam pengembangan.",
+    "categories": {
+      "frontend": {
+        "title": "Frontend Development",
+        "skills": {
+          "html_css": "Membangun struktur web yang semantik dan mendesain antarmuka yang estetis serta responsif di berbagai perangkat.",
+          "js_ts": "Mengimplementasikan logika dinamis dengan keamanan tipe data yang kuat untuk kode yang lebih terstruktur dan minim error.",
+          "react_next": "Membangun aplikasi web modern (SPA/SSR) berkinerja tinggi dengan arsitektur berbasis komponen yang efisien.",
+          "tailwind": "Mempercepat proses styling menggunakan metodologi utility-first untuk hasil desain yang presisi dan konsisten."
+        }
+      },
+      "backend": {
+        "title": "Backend Development",
+        "skills": {
+          "php_laravel": "Membangun aplikasi web yang kuat menggunakan arsitektur MVC dan fitur-fitur modern Laravel untuk skalabilitas tinggi.",
+          "nodejs": "Mengembangkan layanan backend yang cepat dan API yang skalabel dengan memanfaatkan ekosistem JavaScript yang luas.",
+          "mysql": "Merancang dan mengelola skema basis data yang efisien serta mengoptimalkan kueri untuk performa aplikasi yang maksimal.",
+          "restapi": "Merancang dan mengimplementasikan endpoint API yang terstandarisasi, aman, dan efisien untuk integrasi frontend."
+        }
+      },
+      "tools": {
+        "title": "Tools & Server",
+        "skills": {
+          "git": "Mengelola siklus pengembangan kode dengan version control yang terorganisir dan kolaborasi tim yang efisien.",
+          "docker": "Mengotomatisasi deployment aplikasi ke dalam kontainer untuk memastikan konsistensi di berbagai lingkungan server.",
+          "linux": "Mengonfigurasi dan mengelola server Linux untuk hosting aplikasi dengan performa dan keamanan yang optimal."
+        }
+      }
+    }
+  },
+  "SoftSkills": {
+    "title": "Soft Skill",
+    "subtitle": "Gambaran kemampuan interpersonal dan manajerial yang saya miliki.",
+    "categories": {
+      "communication": {
+        "title": "Komunikasi & Tim",
+        "skills": {
+          "teamwork": { "name": "Kerja Sama Tim", "desc": "Terbiasa bekerja lintas tim untuk mencapai target proyek bersama secara harmonis." },
+          "clarity": { "name": "Komunikasi Jelas", "desc": "Menyampaikan konsep teknis yang kompleks dengan bahasa yang mudah dipahami oleh stakeholder." },
+          "empathy": { "name": "Empati", "desc": "Mendengarkan secara aktif dan terbuka terhadap masukan konstruktif dari rekan kerja." }
+        }
+      },
+      "management": {
+        "title": "Manajemen Diri",
+        "skills": {
+          "time": { "name": "Manajemen Waktu", "desc": "Mampu mengatur prioritas tugas dengan efektif untuk memenuhi tenggat waktu yang ketat." },
+          "problem_solving": { "name": "Pemecahan Masalah", "desc": "Menganalisis akar masalah untuk menemukan solusi yang logis, efisien, dan berkelanjutan." },
+          "adaptation": { "name": "Adaptasi Cepat", "desc": "Cepat beradaptasi dengan lingkungan kerja baru dan perkembangan teknologi industri." }
+        }
+      },
+      "leadership": {
+        "title": "Kepemimpinan",
+        "skills": {
+          "proactive": { "name": "Inisiatif & Proaktif", "desc": "Aktif memberikan inovasi dan gagasan kreatif untuk meningkatkan kualitas sistem." },
+          "decision": { "name": "Pengambilan Keputusan", "desc": "Tepat dalam mengambil keputusan teknis maupun manajerial dalam situasi kritis." },
+          "mentoring": { "name": "Mentoring", "desc": "Senang berbagi pengetahuan teknis dan membimbing anggota tim untuk berkembang bersama." }
+        }
+      }
+    }
+  },
+  "Gallery": {
+    "badge": "Dokumentasi Visual",
+    "title": "Galeri",
+    "highlight": "Kegiatan",
+    "subtitle": "Koleksi momen dan dokumentasi dari berbagai kegiatan teknis, komunitas, dan aktivitas profesional lainnya."
+  },
+  "Blog": {
+    "badge": "Wawasan & Artikel",
+    "title": "Blog &",
+    "highlight": "Pemikiran",
+    "subtitle": "Berbagi pengetahuan seputar pengembangan perangkat lunak, teknologi terbaru, dan tips produktivitas pengembang.",
+    "search": "Cari artikel...",
+    "no_results": "Artikel Tidak Ditemukan",
+    "no_results_desc": "Coba gunakan kata kunci lain untuk pencarianmu.",
+    "read_more": "Baca Selengkapnya"
   }
 }
