@@ -9,7 +9,7 @@ const projects = [
   {
     key: 'simaset',
     institution: 'UM Kuningan',
-    image: '/images/simaset.png',
+    image: '/images/simaset-umkuningan.png',
     tags: ['PHP', 'MYSQL', 'Bootstrap'],
     link: 'https://simaset.umkuningan.ac.id/',
   },
