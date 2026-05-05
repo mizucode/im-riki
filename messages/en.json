@@ -91,5 +91,77 @@
     "techMarquee": {
       "title": "Core Technologies & Infrastructure"
     }
+  },
+  "FrontEndApp": {
+    "title": "Front-End App",
+    "description": "A collection of Front-End projects I have developed with a focus on performance, accessibility, and modern design.",
+    "projects": {
+      "sitenor": {
+        "title": "LPDP x Kemenpora SITENOR",
+        "description": "Development of a Landing Page interface focused on ease of access and responsiveness for LPDP applicants."
+      },
+      "sisaspro": {
+        "title": "Sports Standardization and Infrastructure Information System",
+        "description": "Designing an informative Landing Page to facilitate sports standardization data needs."
+      },
+      "sitenor_tenaga": {
+        "title": "Sports Manpower and Organization System",
+        "description": "Building a Landing Page with modern aesthetics for the national sports manpower management system."
+      },
+      "sentramuda": {
+        "title": "Sentra Pembinaan Olahragawan Muda Application",
+        "description": "Implementation of an intuitive landing page interface to support the Indonesian young athlete development program."
+      },
+      "smep": {
+        "title": "Monitoring, Evaluation and Reporting System - Big Data Sport Intelligence",
+        "description": "Development of a professional Landing Page portal for a Big Data-based monitoring system."
+      },
+      "popnas": {
+        "title": "Official Portal POPNAS XVII 2025",
+        "description": "Building the official Landing Page for the POPNAS XVII 2025 event with a focus on fast access to schedule information."
+      },
+      "peparpenas": {
+        "title": "Official Portal PEPARPENAS XI 2025",
+        "description": "Design and development of an inclusive Landing Page for the PEPARPENAS XI 2025 event."
+      },
+      "enumerasi": {
+        "title": "E-Numerasi Home Of Math",
+        "description": "Development of a math education platform Landing Page with a clean and user-friendly interface."
+      },
+      "pmb": {
+        "title": "PMB Umkuningan",
+        "description": "Development of a Landing Page for new student admissions at Universitas Muhammadiyah Kuningan."
+      }
+    }
+  },
+  "BackEndApp": {
+    "title": "Back-End App",
+    "description": "A collection of server-side architectures, API integrations, and database management systems I have developed.",
+    "privateProject": "Sorry, this project is private and cannot be accessed publicly.",
+    "projects": {
+      "SekawanUMKuningan": {
+        "title": "Sekawan Um Kuningan",
+        "description": "Development of a back-end system to simplify the management of correspondence administration."
+      },
+      "filegateway": {
+        "title": "File Gateway Um Kuningan",
+        "description": "Development of a System API to simplify the management of files connected to S3 Object Storage."
+      },
+      "wa-gateway": {
+        "title": "WA Gateway Um Kuningan",
+        "description": "Development of a System API to simplify the management of WhatsApp connected to the Node JS engine."
+      }
+    }
+  },
+  "FullstackApp": {
+    "title": "Fullstack App",
+    "description": "A collection of end-to-end web applications integrating complex user interfaces with robust server-side logic.",
+    "privateProject": "Sorry, this project is private and cannot be accessed publicly.",
+    "projects": {
+      "simaset": {
+        "title": "SIMASET UM Kuningan",
+        "description": "Integrated Asset Management Information System for digitalizing inventory lifecycles and centralized asset monitoring."
+      }
+    }
   }
 }

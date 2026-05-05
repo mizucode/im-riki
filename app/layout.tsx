@@ -55,7 +55,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           {/* Modern Background Blur & Gradient */}
-          <div className="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100 via-white to-white dark:from-indigo-900/20 dark:via-[#09090B] dark:to-[#09090B] opacity-70"></div>
+          <div className="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_top_right,var(--tw-gradient-stops))] from-indigo-100 via-white to-white dark:from-indigo-900/20 dark:via-[#09090B] dark:to-[#09090B] opacity-70"></div>
           
           <NextIntlClientProvider messages={messages}>
             <TooltipProvider>
